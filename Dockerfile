@@ -1,6 +1,6 @@
 FROM node:16.10 AS build
 WORKDIR /build
-COPY package*.json .
+COPY package*.json ./
 RUN yarn install
 COPY . .
 ARG SERVER_URL=http://127.0.0.1:8000/
